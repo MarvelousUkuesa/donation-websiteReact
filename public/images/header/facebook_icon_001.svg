@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.44 17.44">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #3c3c3c;
+      }
+    </style>
+  </defs>
+  <path id="Icon_awesome-facebook-square" data-name="Icon awesome-facebook-square" class="cls-1" d="m15.57,0H1.87C.84,0,0,.84,0,1.87v13.7c0,1.03.84,1.87,1.87,1.87h5.34v-5.93h-2.45v-2.79h2.45v-2.13c0-2.42,1.44-3.76,3.65-3.76.72.01,1.45.07,2.16.19v2.38h-1.22c-.76-.1-1.47.44-1.57,1.2-.01.1-.02.2,0,.31v1.81h2.68l-.43,2.79h-2.25v5.93h5.34c1.03,0,1.87-.84,1.87-1.87V1.87C17.44.84,16.6,0,15.57,0Z"/>
+</svg>

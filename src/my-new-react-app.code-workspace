@@ -1,0 +1,10 @@
+{
+  "folders": [
+	{
+		"path": ".."
+	},
+	{
+		"path": "../../../set_event_lambda"
+	}
+]
+}

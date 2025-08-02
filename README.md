@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+Event Payment & Donation Platform
+A flexible and secure web application that provides event organizers with a versatile payment solution. This platform integrates the Stripe API to seamlessly handle both fixed-price ticket sales and open-ended donations through a single, user-friendly interface.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project Overview
+This project was designed to solve a common challenge for event organizers: managing multiple payment types. The application features a dynamic frontend built with React that adapts the user interface based on whether the event requires a set ticket price or is accepting donations. The backend intelligently routes the transaction to Stripe, ensuring a smooth and secure checkout experience for users.
 
-## Available Scripts
+The primary goal is to provide a robust, real-world example of integrating a powerful payment gateway into a modern web application.
 
-In the project directory, you can run:
+Key Features
+Dual Payment Modes: Supports both fixed-price ticket purchases and variable donation amounts.
 
-### `npm start`
+Dynamic UI: The checkout interface intelligently adapts based on the event's payment model.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Secure Payment Processing: Leverages the Stripe API for all transactions, ensuring security and reliability.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Responsive Design: A clean and modern interface that works seamlessly across all devices.
 
-### `npm test`
+Tech Stack
+Frontend: React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Payment Gateway: Stripe API
 
-### `npm run build`
+Backend: Node.js / Express (or your chosen backend)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Styling: Tailwind CSS (or your chosen styling solution)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Containerization: Docker.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+the backend is done with Aws lamdba function and access control implementation find the backend code at repo
 
-### `npm run eject`
+Getting Started
+Follow these instructions to get a local copy of the project up and running for development and testing purposes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Node.js (v18.x or later recommended)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm (or yarn)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+A Stripe account to get API keys
 
-## Learn More
+Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clone the repository:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+git clone https://github.com/your-username/your-repo-name.git
 
-### Code Splitting
+Navigate to the project directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+cd your-repo-name
 
-### Analyzing the Bundle Size
+Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+npm install
 
-### Making a Progressive Web App
+Set up environment variables:
+Create a .env file in the root of your project and add the necessary environment variables. See the section below for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Environment Variables
+To run this project, you will need to add the following environment variables to your .env file. These are essential for connecting to the Stripe API.
 
-### Advanced Configuration
+REACT_APP_STRIPE_PUBLISHABLE_KEY=pk_test_your_publishable_key
+STRIPE_SECRET_KEY=sk_test_your_secret_key
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Replace the placeholder values with your actual test keys from your Stripe Developer Dashboard.
 
-### Deployment
+Available Scripts
+In the project directory, you can run the following commands:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+npm start
 
-### `npm run build` fails to minify
+Runs the app in development mode.
+Open http://localhost:3000 to view it in your browser. The page will automatically reload when you make changes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm run build
+
+Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.
+
+npm test
+
+Launches the test runner in interactive watch mode.
+
+Running with Docker
+This project includes a Dockerfile for easy containerization, providing a consistent environment for both development and production.
+
+Prerequisites for Docker
+
+Docker Desktop installed and running on your machine.
+
+Build and Run the Container
+
+Build the Docker image:
+From the project's root directory, run the following command. This will build the image and tag it with a name you provide.
+
+docker build -t your-app-name .
+
+Run the Docker container:
+This command starts the container and maps port 3000 on your machine to port 3000 inside the container.
+
+docker run -p 3000:3000 -d --name your-container-name your-app-name
+
+Once the container is running, the application will be available at http://localhost:3000.
+
+Contributing
+Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
