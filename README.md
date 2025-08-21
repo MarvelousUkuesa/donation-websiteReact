@@ -43,7 +43,7 @@ Installation
 
 Clone the repository:
 
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/MarvelousUkuesa/donation-websiteReact.git
 
 Navigate to the project directory:
 
